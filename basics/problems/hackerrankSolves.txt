@@ -1,0 +1,103 @@
+1.
+https://www.hackerrank.com/contests/kongu-a-infytq-a-coding-a-21-dec/challenges/chat-or-ignore/problem
+Rahul has got a new phone.He is getting lots of messages on Facebook and many of them are from girls.But he knows many boys uses fake ID to prank others. So he designed a method to guess whether the user who messaged him is a male or female. If the number of distinct characters in one's user name is odd, then he is a male, otherwise she is a female.
+
+You are given the string that denotes the user name, please help our Rahul to determine the gender of this user by his method
+
+Input Format
+
+The first-line contains a non-empty string, that contains only lowercase English letters — the user name. This string contains at most 100 letters.
+
+Constraints
+
+1<=length of string<=1000
+
+Output Format
+
+If it is a female by our Chandu's method (the number of distinct characters is 'ODD' ), print "CHAT WITH HER!" (without the quotes), otherwise, print "IGNORE HIM!" (without the quotes).
+
+Sample Input 0
+
+wjmzbmr
+Sample Output 0
+
+CHAT WITH HER!
+Sample Input 1
+
+xiaodao
+Sample Output 1
+
+IGNORE HIM!
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine();
+        int count = 0;
+        for(int i=0;i<s.length();i++){
+            if(s.indexOf(s.charAt(i),i+1) != -1)
+                count++;
+        }
+        if(count%2 == 0){
+            System.out.println("IGNORE HIM!");
+        }else System.out.println("CHAT WITH HER!");
+        sc.close();
+    }
+}
+
+========================================================
+https://www.hackerrank.com/contests/kongu-a-infytq-a-coding-a-21-dec/challenges/problem-with-cases/problem
+==================================================\
+Sample Input 0
+
+BNHWpnpawg
+Sample Output 0
+
+bnhwpnpawg
+Sample Input 1
+
+VTYGP
+Sample Output 1
+
+VTYGP
+Contest ends in 2 hours
+Submissions: 225
+Max Score: 100
+Difficulty: Easy
+Rate This Challenge:
+
+    
+More
+ 
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int lwr = 0, up = 0,i=0;
+        String s = sc.nextLine();
+        for(i=0;i<s.length();i++){
+            if(Character.isUpperCase(s.charAt(i))){
+                up++;
+            }else lwr++;
+        }
+    
+        if(up>lwr){
+            System.out.print(s.toUpperCase());
+        }else System.out.print(s.toLowerCase());
+
+    }
+}
