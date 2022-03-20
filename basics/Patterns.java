@@ -2,10 +2,10 @@ package basics;
 
 public class Patterns {
     public static void main(String[] args) {
-        // printSequence(5);
-        // printingStars(5);
+        printSequence(5);
+        printingStars(5);
         printingStarsReverse(5);
-        // printingSquareHol(5);
+        printSequenceRev(5);
 
     }
 

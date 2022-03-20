@@ -143,7 +143,7 @@ class Sorts {
     int getNum() {
 
         return ++count;
-    }
+    }       
 
     static void selectionSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {
